@@ -4,7 +4,7 @@
 
 # Entrevista Técnica Innovación y Desarrollo
   Estamos muy contentos  de que estes interesado/a en sumarte a nuestro equipo! 
-  Por eso esperamos que puedas completar este breve examen técnico para demostrar tus capacidades!
+  Por eso esperamos que puedas completar este breve examen técnico para conocer de lo que sos capaz!
  
 ### Algoritmos - JavaScript
 - A) Crear un algoritmo que muestre los números pares entre el 0 y el 100.
