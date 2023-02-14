@@ -17,7 +17,23 @@ const ProductList = () => {
       <div className="inputBox">
         <input className="input" type="text" placeholder="Buscar por nombre o código de producto" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       </div>
-      {console.log(filteredProducts)}
+      <div className="allProducts">
+        {filteredProducts.map((product) => (
+          <div key={product.id} className="product-item">
+            <img src={product.img} alt={product.name} />
+            <div className="item-info">
+              <div>
+                <h3>{product.name}</h3>
+                <p>{product.desc}</p>
+              </div>
+              <div>
+                <p>Precio: ${product.price}</p>
+                <p>Stock: {product.stock}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
