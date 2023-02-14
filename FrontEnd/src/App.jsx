@@ -26,6 +26,7 @@ const ProductList = () => {
           <Item product={product} />
         ))}
       </div>
+      <p style={{ fontSize: '25px' }}>{filteredProducts.length} resultados</p>
     </>
   );
 };
