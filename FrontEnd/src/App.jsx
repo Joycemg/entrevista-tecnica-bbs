@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { product } from '../productdb.js';
-import { Item } from './components/Item.jsx';
+import { Item } from './components/Item';
+import FormInput from './components/FormInput';
 import './App.css';
 
 const ProductList = () => {
@@ -13,11 +14,13 @@ const ProductList = () => {
     }, 3000);
   }, [searchTerm]);
 
+  const handleSearch = (search) => {
+    setSearchTerm(search);
+  };
+
   return (
     <>
-      <div className="inputBox">
-        <input className="input" type="text" placeholder="Buscar por nombre o código de producto" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-      </div>
+      <FormInput setSearch={handleSearch} />
       <div className="allProducts">
         {filteredProducts.map((product) => (
           <Item product={product} />
