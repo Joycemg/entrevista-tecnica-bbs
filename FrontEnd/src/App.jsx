@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { product } from '../productdb.js';
+import { Item } from './components/Item.jsx';
 import './App.css';
 
 const ProductList = () => {
@@ -19,19 +20,7 @@ const ProductList = () => {
       </div>
       <div className="allProducts">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="product-item">
-            <img src={product.img} alt={product.name} />
-            <div className="item-info">
-              <div>
-                <h3>{product.name}</h3>
-                <p>{product.desc}</p>
-              </div>
-              <div>
-                <p>Precio: ${product.price}</p>
-                <p>Stock: {product.stock}</p>
-              </div>
-            </div>
-          </div>
+          <Item product={product} />
         ))}
       </div>
     </>
