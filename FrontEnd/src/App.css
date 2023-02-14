@@ -62,7 +62,6 @@
 }
 
 .allProducts {
-  margin: 11px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -80,15 +79,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+
   text-align: center;
 }
 
 img {
-  margin: 2px;
-  width: 347px;
-  height: 347px;
+  margin: 20px;
+  width: 307px;
+  height: 307px;
   background-color: white;
+  -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.75);
 }
 
 h3 {
@@ -101,8 +103,14 @@ p {
 }
 
 .item-info {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: left;
+}
+
+.price {
+  font-size: 22px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
 }

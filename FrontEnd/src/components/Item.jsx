@@ -3,13 +3,14 @@ export const Item = ({ product }) => {
     <div key={product.id} className="product-item">
       <img src={product.img} alt={product.name} />
       <div className="item-info">
-        <div>
+        <div className="item-text">
           <h3>{product.name}</h3>
-          <p>{product.desc}</p>
+          <p>{product.id}</p>
         </div>
         <div>
-          <p>Precio: ${product.price}</p>
-          <p>Stock: {product.stock}</p>
+          <p>
+            Precio: <span className="price">${product.price}</span>
+          </p>
         </div>
       </div>
     </div>
